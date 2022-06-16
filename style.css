@@ -196,7 +196,8 @@ p.itemsLeft {
   background-color: var(--white);
   padding: 2rem 3rem;
   border-radius: 5px;
-  margin: 5.5rem 10rem;
+  margin: 5.5rem 1rem 0 0;
+  width: 60%;
 }
 .modalEl {
   margin: 1.5rem 1rem;
@@ -348,7 +349,38 @@ h4.elText-heading {
 .pledgePargraph {
   grid-area: pledgePargraph;
 }
-
+.complitedModal {
+  display: none;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  width: 38.2%;
+  background-color: var(--white);
+  margin: 7rem 14rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+}
+.checkImg {
+  width: 4rem;
+  margin: 2rem 0;
+}
+.complited-heading {
+  margin: 0;
+}
+.complted-paragraph {
+  color: var(--dark-gray);
+  line-height: 1.5rem;
+}
+.complited-button {
+  width: fit-content;
+  border: none;
+  background-color: var(--moderate-cyan);
+  color: var(--white);
+  border-radius: 20px;
+  padding: 0.5rem 1.3rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
