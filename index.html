@@ -18,7 +18,14 @@
   <body>
     <header>
       <img src="/images/logo.svg" />
-      <nav class="menu">
+      <img src="/images/icon-hamburger.svg" class="hamburgerIcon mobile" />
+      <img src="/images/icon-close-menu.svg" class="closeIcon mobile hidden" />
+      <nav class="dropdownMenu mobile hidden">
+        <a href="#">About</a>
+        <a href="#">Discover</a>
+        <a href="#">Get Started</a>
+      </nav>
+      <nav class="menu desktop">
         <a href="#">About</a>
         <a href="#">Discover</a>
         <a href="#">Get Started</a>
@@ -35,7 +42,7 @@
           <button class="back">Back this project</button>
           <button class="bookmark">
             <img src="/images/icon-bookmark.svg" class="bookmark-icon" />
-            <p>Bookmark</p>
+            <p class="bookmarkText">Bookmark</p>
           </button>
         </div>
       </section>

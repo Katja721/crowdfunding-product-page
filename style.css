@@ -381,10 +381,319 @@ h4.elText-heading {
   font-weight: 700;
   margin: 1rem 0;
 }
+.mahogany {
+  opacity: 0.5;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
+}
+.mobile {
+  display: none;
+}
+@media screen and (max-width: 400px) {
+  .dropdownMenu {
+    position: absolute;
+    flex-direction: column;
+    left: 3rem;
+    top: 4rem;
+    background-color: var(--white);
+    width: 70%;
+    border-radius: 5px;
+    box-shadow: -90px 15px 80px rgba(54, 54, 54, 0.4),
+      0px 66px 15px 100px rgba(54, 54, 54, 0.4),
+      0px 66px 15px 100px rgba(54, 54, 54, 0.05);
+  }
+  .dropdownMenu a {
+    color: var(--black);
+    margin: 0;
+    border-top: 1px solid var(--dark-gray);
+    padding: 1.2rem 1rem;
+  }
+  .dropdownMenu:first-child {
+    border: none;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  body {
+    background-image: url(/images/image-hero-mobile.jpg);
+  }
+  header {
+    margin: 2rem 1rem;
+  }
+  .hamburgerIcon {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 20rem;
+  }
+  .menuOverlay {
+    position: absolute;
+    background-color: var(--dark-gray);
+    padding: 1rem 2rem;
+    width: fit-content;
+    height: fit-content;
+    opacity: 0.5;
+  }
+  main {
+    margin: 11rem 0 0 0;
+  }
+  .introHeading {
+    width: 94%;
+  }
+  .intro {
+    margin: 0;
+  }
+  .item {
+    padding: 1.5rem;
+  }
+  .reward {
+    width: fit-content;
+  }
+  .stats {
+    margin: 0;
+  }
+  .project {
+    margin: 0;
+    padding: 1rem 2rem;
+  }
+  .bookmark {
+    padding: 0;
+    background: none;
+  }
+  .data {
+    flex-direction: column;
+    text-align: center;
+  }
+  hr {
+    height: 0rem;
+    margin: 2rem 5rem;
+  }
+  .progress-bar {
+    margin: 2rem 0;
+  }
+  .itemHeader {
+    flex-direction: column;
+  }
+  .itemHeader p {
+    margin: 0.5rem 0;
+  }
+  .itemFooter {
+    flex-direction: column;
+  }
+  .overlay {
+    padding: 0rem 1rem;
+  }
+  .modal-first {
+    padding: 2rem 1rem;
+    width: fit-content;
+  }
+  .modalEl {
+    margin: 1.5rem 0rem;
+  }
+  .pledgeEl {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr;
+    grid-template-areas: "pledgePargraph" "submitPledge";
+  }
+  .submitPledge {
+    justify-content: space-between;
+  }
+  .pledgePargraph {
+    text-align: center;
+    margin: 2rem 0 0.5rem 0;
+  }
+  .value {
+    border-radius: 26px;
+    padding: 0.8rem 2.5rem 0.8rem 2rem;
+  }
+  .pledgeEl {
+    padding: 0;
+  }
+  .continue {
+    padding: 1rem 1.8rem;
+    margin: 0 1rem;
+    border-radius: 25px;
+  }
+  .complitedModal {
+    width: 86%;
+    margin: 7rem 0rem;
+    padding: 1rem 1rem;
+  }
+  .hidden {
+    display: none;
+  }
+  .closeIcon {
+    position: absolute;
+    left: 20rem;
+  }
+}
+@media screen and (max-width: 600px) and (min-width: 400px) {
+  .dropdownMenu {
+    position: absolute;
+    flex-direction: column;
+    left: 3rem;
+    top: 4rem;
+    background-color: var(--white);
+    width: 70%;
+    border-radius: 5px;
+    box-shadow: -90px 15px 80px rgba(54, 54, 54, 0.4),
+      0px 66px 15px 100px rgba(54, 54, 54, 0.4),
+      0px 66px 15px 100px rgba(54, 54, 54, 0.05);
+  }
+  .dropdownMenu a {
+    color: var(--black);
+    margin: 0;
+    border-top: 1px solid var(--dark-gray);
+    padding: 1.2rem 1rem;
+  }
+  .dropdownMenu:first-child {
+    border: none;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  body {
+    background-image: url(/images/image-hero-mobile.jpg);
+  }
+  header {
+    margin: 2rem 1rem;
+  }
+  .hamburgerIcon {
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    left: 24rem;
+  }
+
+  main {
+    margin: 11rem 0 0 0;
+  }
+  .introHeading {
+    width: 94%;
+  }
+  .intro {
+    margin: 0;
+  }
+  .item {
+    padding: 1.5rem;
+  }
+  .reward {
+    width: fit-content;
+  }
+  .stats {
+    margin: 0;
+  }
+  .project {
+    margin: 0;
+    padding: 1rem 2rem;
+  }
+  .bookmark {
+    padding: 0;
+    background: none;
+  }
+  .data {
+    flex-direction: column;
+    text-align: center;
+  }
+  hr {
+    height: 0rem;
+    margin: 2rem 5rem;
+  }
+  .progress-bar {
+    margin: 2rem 0;
+  }
+  .itemHeader {
+    flex-direction: column;
+  }
+  .itemHeader p {
+    margin: 0.5rem 0;
+  }
+  .itemFooter {
+    flex-direction: column;
+  }
+  .overlay {
+    padding: 0rem 1rem;
+  }
+  .modal-first {
+    padding: 2rem 1rem;
+    width: fit-content;
+  }
+  .modalEl {
+    margin: 1.5rem 0rem;
+  }
+  .pledgeEl {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.1fr 0.1fr;
+    grid-template-areas: "pledgePargraph" "submitPledge";
+  }
+  .submitPledge {
+    justify-content: space-between;
+  }
+  .pledgePargraph {
+    text-align: center;
+    margin: 2rem 0 0.5rem 0;
+  }
+  .value {
+    border-radius: 26px;
+    padding: 0.8rem 2.5rem 0.8rem 2rem;
+  }
+  .pledgeEl {
+    padding: 0;
+  }
+  .continue {
+    padding: 1rem 1.8rem;
+    margin: 0 1rem;
+    border-radius: 25px;
+  }
+  .complitedModal {
+    width: 86%;
+    margin: 7rem 0rem;
+    padding: 1rem 1rem;
+  }
+  .hidden {
+    display: none;
+  }
+  .closeIcon {
+    position: absolute;
+    left: 24rem;
+  }
+  .menuOverlay {
+    position: absolute;
+    background-color: var(--dark-gray);
+    padding: 1rem 2rem;
+    width: fit-content;
+    height: fit-content;
+  }
+}
+@media screen and (max-width: 1000px) and (min-width: 600px) {
+  header {
+    margin: 3rem 3.5rem;
+  }
+  .intro {
+    margin: 13.5rem 10rem 0 10rem;
+  }
+  .stats {
+    margin: 2rem 10rem;
+  }
+  .project {
+    margin: 2rem 10rem;
+  }
+  .bookmark {
+    margin: 0 0 0 1rem;
+  }
+  .complitedModal {
+    position: absolute;
+    left: -4rem;
+  }
 }

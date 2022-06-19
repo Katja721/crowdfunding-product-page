@@ -18,7 +18,7 @@ const backers = document.querySelector(".numOfBackers");
 let collected = 89914;
 const needed = 100000;
 
-function setOverlaySize() {
+function setOverlaySize(overlay) {
   const siteHeight = `${body.clientHeight}px`;
   const siteWidth = `${body.clientWidth}px`;
   overlay.style.height = siteHeight;
@@ -39,7 +39,7 @@ function removeOverlay() {
 function addOverlay() {
   overlay.classList.remove("hidden");
 }
-setOverlaySize();
+setOverlaySize(overlay);
 continueElements.forEach((el) =>
   el.addEventListener("click", function (e) {
     const click = e.target;
@@ -73,7 +73,7 @@ bookmark.addEventListener("click", function (e) {
   const click = e.target;
   bookmark.innerHTML = `
   <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"class="bookmark-icon><g fill="none" fill-rule="evenodd"><circle fill="#147b74" cx="28" cy="28" r="28"/><path fill="#ffffff" d="M23 19v18l5-5.058L33 37V19z" "/></g></svg>
-  <p>Bookmarked</p>
+  <p class="bookmarkText">Bookmarked</p>
   `;
   bookmark.style.color = "var(--dark-cyan)";
 });
@@ -100,3 +100,33 @@ closeModal.addEventListener("click", function () {
 });
 
 progressMeter(collected, needed);
+
+//mobile responsive design
+const mediaMobile1 = window.matchMedia("(max-width: 500px)");
+const bookmarkText = document.querySelector(".bookmarkText");
+const dropdownMenu = document.querySelector(".dropdownMenu");
+const hamburgerIcon = document.querySelector(".hamburgerIcon");
+const closeIcon = document.querySelector(".closeIcon");
+const menuOverlay = document.querySelector(".menuOverlay");
+console.log(dropdownMenu, hamburgerIcon, closeIcon);
+console.log(bookmarkText.textContent);
+if (mediaMobile1.matches) {
+  bookmarkText.remove();
+  bookmark.addEventListener("click", function (e) {
+    const click = e.target;
+    bookmark.innerHTML = `
+    <svg width="56" height="56" xmlns="http://www.w3.org/2000/svg"class="bookmark-icon><g fill="none" fill-rule="evenodd"><circle fill="#147b74" cx="28" cy="28" r="28"/><path fill="#ffffff" d="M23 19v18l5-5.058L33 37V19z" "/></g></svg>
+    
+    `;
+  });
+}
+hamburgerIcon.addEventListener("click", function () {
+  hamburgerIcon.classList.add("hidden");
+  closeIcon.classList.remove("hidden");
+  dropdownMenu.style.display = "flex";
+});
+closeIcon.addEventListener("click", function () {
+  hamburgerIcon.classList.remove("hidden");
+  closeIcon.classList.add("hidden");
+  dropdownMenu.style.display = "none";
+});
